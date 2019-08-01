@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     get '/shoes/:id' => 'shoes#show'
     post '/shoes' => 'shoes#create'
     patch '/shoes/:id' => 'shoes#update'
+
+    post '/sessions' => 'sessions#create'
   end
 end

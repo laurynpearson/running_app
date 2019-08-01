@@ -3,6 +3,7 @@
     location: route.location,
     description: route.description,
     distance: route.description,
-    duration: route.duration
+    duration: route.duration,
+    user: current_user
   }
 end
