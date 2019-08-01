@@ -1,0 +1,8 @@
+@shoes.map do |shoe|
+  {
+    description: shoe.description,
+    mileage: shoe.mileage,
+    active: shoe.active,
+    year_purchased: shoe.year_purchased
+  }
+end

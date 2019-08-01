@@ -7,5 +7,14 @@ Rails.application.routes.draw do
     get '/users' => 'users#index'
     get '/users/:id' => 'users#show'
     post '/users' => 'users#create'
+
+    get '/routes' => 'routes#index'
+    get '/routes/:id' => 'routes#show'
+    post '/routes' => 'routes#create'
+
+    get '/shoes' => 'shoes#index'
+    get '/shoes/:id' => 'shoes#show'
+    post '/shoes' => 'shoes#create'
+    patch '/shoes/:id' => 'shoes#update'
   end
 end

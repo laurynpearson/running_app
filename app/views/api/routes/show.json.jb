@@ -1,0 +1,6 @@
+{
+  location: @route.location,
+  description: @route.description,
+  distance: @route.distance,
+  duration: @route.duration
+}
