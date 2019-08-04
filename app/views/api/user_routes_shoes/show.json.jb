@@ -1,0 +1,6 @@
+{
+  id: @urs.id,
+  user_id: @urs.user_id,
+  route_id: @urs.route_id,
+  shoe_id: @urs.shoe_id
+}

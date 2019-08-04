@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     patch '/shoes/:id' => 'shoes#update'
 
     post '/sessions' => 'sessions#create'
+
+    post '/urs/' => 'user_routes_shoes#create'
   end
 end

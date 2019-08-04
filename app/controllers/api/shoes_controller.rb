@@ -19,10 +19,10 @@ class Api::ShoesController < ApplicationController
   end
   def update
     @shoe = Shoe.find_by(id: params[:id])
-    @shoe.description = params[:description] || @shoe.description
+    # @shoe.description = params[:description] || @shoe.description
     @shoe.mileage = params[:mileage] || @shoe.mileage
     @shoe.active = params[:active] || @shoe.active
-    @shoe.year_purchased = params[:year_purchased] || @shoe.year_purchased
+    # @shoe.year_purchased = params[:year_purchased] || @shoe.year_purchased
     @shoe.save
     render 'show.json.jb'
   end
