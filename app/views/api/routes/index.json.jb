@@ -1,8 +1,8 @@
 @routes.map do |route|
   {
-    location: route.location,
-    description: route.description,
-    distance: route.description,
+    city: route.city,
+    name: route.name,
+    distance: route.distance,
     duration: route.duration,
     user: current_user
   }
