@@ -19,3 +19,9 @@
 # route = Route.create(location: "Chicago", distance: 8.01, description: "Run south on lakefront path", duration: "1:29:40")
 
 
+
+
+response = HTTP.get("https://www.strava.com/api/v3/routes/#{ENV['key']}",headers: {Authorization: "Bearer caac0574b7ff500ef021b576da87821204f698d0"})
+p routes = response.parse['segments']
+
+ 
