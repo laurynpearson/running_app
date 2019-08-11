@@ -9,9 +9,9 @@ class Api::RoutesController < ApplicationController
   end
   def create
     @route = Route.create(
-      location: params[:location],
+      city: params[:city],
       distance: params[:distance],
-      description: params[:description],
+      name: params[:name],
       duration: params[:duration]
       )
     render 'show.json.jb'
