@@ -3,9 +3,6 @@ class Api::ShoesController < ApplicationController
     @shoes = Shoe.all
     if current_user
       @shoes = current_user.shoes
-      # if @shoes.description == @shoes.description
-      #   p 'same'
-      # end
     else
       @shoes = []
     end

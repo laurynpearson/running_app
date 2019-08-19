@@ -1,4 +1,13 @@
 class Api::UserRoutesShoesController < ApplicationController
+  def index
+    @urs = UserRouteShoe.all
+    if current_user
+      @urs = current_user.user_route_shoes
+    else
+      @urs = []
+    end
+    render 'index.json.jb'
+  end
   def create
     @urs = UserRouteShoe.new(
       user_id: current_user.id,

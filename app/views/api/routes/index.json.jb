@@ -1,5 +1,6 @@
 @routes.map do |route|
   {
+    id: route.id,
     city: route.city,
     name: route.name,
     distance: route.distance,
