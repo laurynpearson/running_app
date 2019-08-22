@@ -21,15 +21,17 @@ class Api::UserRoutesShoesController < ApplicationController
     @urs.save
 
     @shoe = UserRouteShoe.last.shoe
+    @route = UserRouteShoe.last.route
     p '*' * 50
     p @shoe
     p '*' * 50
-
-    @urs.shoe.mileage = @urs.route.distance.to_i + @urs.shoe.mileage.to_i
+   
+    @shoe.mileage = @route.distance.to_i + @shoe.mileage.to_i
     p '*' * 50
-    p @urs.shoe.mileage.to_i
-    p '*' * 50
+    p @shoe.mileage.to_i
+    p '$' * 50
     @shoe.save
+    p '#' * 50
     p @shoe.mileage.to_i
     render 'show.json.jb'
   end

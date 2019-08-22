@@ -2,7 +2,7 @@ class Api::ShoesController < ApplicationController
   def index
     @shoes = Shoe.all
     if current_user
-      @shoes = current_user.shoes
+      @shoes = current_user.shoes.uniq
     else
       @shoes = []
     end
@@ -25,8 +25,8 @@ class Api::ShoesController < ApplicationController
   def update
     @shoe = Shoe.find_by(id: params[:id])
     # @shoe.description = params[:description] || @shoe.description
-    @shoe.mileage = params[:mileage] || @shoe.mileage
-    @shoe.active = params[:active] || @shoe.active
+    # @shoe.mileage = params[:mileage] || @shoe.mileage
+    @shoe.active = params[:active]
     # @shoe.year_purchased = params[:year_purchased] || @shoe.year_purchased
     @shoe.save
     render 'show.json.jb'

@@ -1,8 +1,9 @@
 {
+  id: @shoe.id,
   description: @shoe.description,
   mileage: @shoe.mileage,
   active: @shoe.active,
   year_purchased: @shoe.year_purchased,
-  user: current_user,
-  id: @shoe.id
+  user: current_user
+  
 }

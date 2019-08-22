@@ -7,6 +7,7 @@
     route_name: urs.route.name,
     route_city: urs.route.city,
     route_distance: urs.route.distance,
-    shoe_description: urs.shoe.description
+    shoe_description: urs.shoe.description,
+    shoe_mileage: urs.shoe.mileage
   }
 end
