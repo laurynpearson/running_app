@@ -3,5 +3,5 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   has_many :user_route_shoes
   has_many :shoes
-  has_many :routes
+  has_many :routes, through: :user_route_shoes
 end
