@@ -1,3 +1,4 @@
+require 'http'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -21,7 +22,13 @@
 
 
 
-response = HTTP.get("https://www.strava.com/api/v3/routes/#{ENV['key']}",headers: {Authorization: "Bearer caac0574b7ff500ef021b576da87821204f698d0"})
-p routes = response.parse['segments']
+response = HTTP.get("https://www.strava.com/api/v3/running_races?year=2019" , headers: {Authorization: "Bearer {{key}}"})
+ 
+# response.parse[i]["name"]
+i = 
+while i < response.parse.length
+  race = Race.create(name: response.parse[i]["name"], start_date_local: response.parse[i]["start_date_local"], distance: response.parse[i]["distance"], city: response.parse[i]["city"], state: response.parse[i]["state"], country: response.parse[i]["country"])
+  i += 1
+end
 
  

@@ -5,6 +5,6 @@
     name: route.name,
     distance: route.distance,
     duration: route.duration,
-    user: current_user
+    user: current_user,
   }
 end

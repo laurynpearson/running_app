@@ -1,0 +1,7 @@
+@coords.map do | coord |
+  {
+    longitude: coord.longitude,
+    latitude: coord.latitude,
+    route_id: coord.route_id
+  }
+end

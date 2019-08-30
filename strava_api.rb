@@ -10,14 +10,12 @@ require 'http'
 
 
 
-response = HTTP.get("https://www.strava.com/api/v3/routes/100",headers: {Authorization: "Bearer KEY"})
-p routes = response.parse["segments"][0]
+# response = HTTP.get("https://www.strava.com/api/v3/routes/100",headers: {Authorization: "Bearer KEY"})
+# p routes = response.parse["segments"][0]
+
+response = HTTP.get("https://www.strava.com/api/v3/running_races?year=2019" , headers: {Authorization: "Bearer "})
+ 
+p response.parse[0]["name"]
 
 
 
-# name
-# activity_type
-# distance
-# city
-# state
-# country

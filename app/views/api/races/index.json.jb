@@ -1,0 +1,11 @@
+@races.map do |race|
+  {
+    id: race.id,
+    name: race.name,
+    start_date_time: race.friendly_date,
+    distance: race.meters_to_miles,
+    city: race.city,
+    state: race.state,
+    country: race.country
+  }
+end

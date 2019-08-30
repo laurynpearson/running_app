@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_023050) do
+ActiveRecord::Schema.define(version: 2019_08_29_192753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coords", force: :cascade do |t|
+    t.float "longitude"
+    t.float "latitude"
+    t.integer "route_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_date_local"
+    t.float "distance"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "route_coords", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "route_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "routes", force: :cascade do |t|
     t.string "city"
