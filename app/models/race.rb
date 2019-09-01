@@ -7,5 +7,4 @@ class Race < ApplicationRecord
   def friendly_date
     start_date_local.strftime("%A, %b %d %Y")
   end
-  
 end

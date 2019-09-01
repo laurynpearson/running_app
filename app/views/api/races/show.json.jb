@@ -1,7 +1,7 @@
 {
   name: @race.name,
   start_date_time: @race.start_date_local,
-  distance: @race.distance.m_to_miles,
+  distance: @race.distance.meters_to_miles,
   city: @race.city,
   state: @race.state,
   country: @race.country
