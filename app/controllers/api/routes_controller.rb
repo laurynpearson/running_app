@@ -14,7 +14,7 @@ class Api::RoutesController < ApplicationController
       name: params[:name],
       duration: params[:duration]
       )
-    binding.pry
+    # binding.pry
     @route = Route.find_by(id: Route.last.id)
     p "*" * 50
     p @route
